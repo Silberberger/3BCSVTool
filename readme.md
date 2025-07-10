@@ -1,20 +1,19 @@
-CSV Lint - Notepad++ plugin
+3BCSVTool - Notepad++ plugin
 ===========================
-![Release version](https://img.shields.io/github/v/release/BdR76/CSVLint) ![GitHub all releases](https://img.shields.io/github/downloads/BdR76/CSVLint/total) ![GitHub latest release](https://img.shields.io/github/downloads/BdR76/CSVLint/latest/total) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=T8QZSFBNAPERL)   
 
-CSV Lint plug-in for [Notepad++](http://notepad-plus-plus.org/) adds
+
+3BCSVTool plug-in for [Notepad++](http://notepad-plus-plus.org/) adds
 syntax highlighting to [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values)
 (csv) and fixed width data files. It automatically detects column datatypes,
 can detect data formatting errors and adjust datetime and decimal formats.
 
-![preview screenshot](/csvlint_preview.png?raw=true "CSVLint plug-in preview")
 
-You can use CSV Lint to analyse, validate, convert and reformat text data
+You can use 3BCSVTool to analyse, validate, convert and reformat text data
 files. It is _not_ meant to be a replacement for spreadsheet programs like
 Excel or SPSS, but rather it's a quality control tool to examine, verify or
 polish up a dataset before further processing.
 
-With CSV Lint you can take a dataset and:
+With 3BCSVTool you can take a dataset and:
 
 * Scan for metadata, i.e. detect columns and datatypes
 * Create schema.ini based on metadata
@@ -27,19 +26,11 @@ With CSV Lint you can take a dataset and:
 * Convert csv data to SQL insert script or XML or JSON format.
 * Generate Python, R or PowerShell scripts
 
-CSV Lint doesn't require an internet connection and doesn't use any cloud service.
-All data processing is done offline on the pc that runs Notepad++.
-The plug-in is stable and works for most use-cases, if you encounter any bugs or
-unexpected behaviour feel free to [report any issues here](https://github.com/BdR76/CSVLint/issues).
-CSVLint is based on a prototype project [Dataset MultiTool](https://github.com/BdR76/datasetmultitool)
-
-**If you find the CSV Lint plug-in useful you can buy me a coffee!** ☕  
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=T8QZSFBNAPERL)
 
 How to install
 --------------
 
-The CSV Lint plugin is available in Notepad++ in the Plugins Admin menu.
+The 3BCSVTool plugin is available in Notepad++ in the Plugins Admin menu.
 
 * Install [Notepad++](https://notepad-plus-plus.org/)
 * In Notepad++ go to menu item `Plugins > Plugins Admin...`
@@ -52,17 +43,12 @@ Note: the plug-in is available in the Plugins Admin menu starting with
 Notepad++ v8.1.9.1. If you have a Notepad++ version older than v8.1.9.1 or
 want to install the plug-in manually:
 
-* Go to the [releases page](https://github.com/BdR76/CSVLint/releases)
-* Find the latest release
-* 32bit version; unzip [CSVLint.dll (32bit)](../../releases/download/0.4.6.8/CSVLint_x86.zip/) to folder `.\Program Files (x86)\Notepad++\plugins\CSVLint\CSVLint.dll`.
-* 64bit version; unzip [CSVLint.dll (64bit)](../../releases/download/0.4.6.8/CSVLint_x64.zip/) to folder `.\Program Files\Notepad++\plugins\CSVLint\CSVLint.dll`.
-* restart Notepad++
 
 How to use it
 -------------
 
 1. Open your dataset in [Notepad++](http://notepad-plus-plus.org/)
-2. Open the "CSV Lint window" from the plug-in menu or toolbar
+2. Open the "3BCSVTool window" from the plug-in menu or toolbar
 3. Press "Detect columns" to automatically detect format
 4. Optionally, manually enter or adjust metadata
 5. Press "Validate data" to detect any data errors
@@ -70,10 +56,6 @@ How to use it
 If there are no errors in the data, you can click "Reformat data" for data
 reformatting options, or select "Convert to SQL" menu item to generate an
 SQL insert script.
-
-Also see this quick tour video, which shows how the plug-in works.
-
-[![Watch video, CSV Lint plug-in features oveview](http://img.youtube.com/vi/_Me-ICCBu60/mqdefault.jpg)](http://www.youtube.com/watch?v=_Me-ICCBu60 "CSV Lint plug-in Notepad++") [![Watch video, CSV File: View, Add Column Colors and Sort Data using Notepad++](http://img.youtube.com/vi/k6w5BcaSqHc/mqdefault.jpg)](http://www.youtube.com/watch?v=k6w5BcaSqHc "CSV File: View, Add Column Colors and Sort Data using Notepad++")
 
 
 Schema.ini
@@ -108,7 +90,7 @@ width text files and set the `Width` for each column.
 DateTimeFormat is not case sensitive and uses `dd/mm/yyyy` or
 `yyyy-mm-dd hh:nn:ss` etc.
 
-DecimalSymbol can be either `.` or `,` and CSV Lint will assume the thousand
+DecimalSymbol can be either `.` or `,` and 3BCSVTool will assume the thousand
 separators symbol is the opposite of the DecimalSymbol. Define the maximum
 decimals digits for example `NumberDigits=2` for values like "1.23" or "-45.67"
 etc.
@@ -128,7 +110,7 @@ right. It will check the input data for the following errors:
 
 Roadmap/goals
 -------------
-The CSV Lint plugin is work-in-progress, here is list of features I want to add (~~strikethrough~~ is done)
+The 3BCSVTool plugin is work-in-progress, here is list of features I want to add (~~strikethrough~~ is done)
 
 - [x] ~~Convert datetime values to different formats~~
 - [x] ~~Convert decimal symbol to point/comma~~
@@ -169,25 +151,3 @@ or change the metadata manually, the column colors aren't always updated
 immediately. Click inside the textfile or switch tabs to a different file and
 then back and it should display correctly.
 
-Acknowledgements
-----------------
-With thanks to:
-
-* kbilsted for providing the excellent
-[NotepadPlusPlusPluginPack.Net](https://github.com/kbilsted/NotepadPlusPlusPluginPack.Net)
-* jokedst, [CsvQuery](https://github.com/jokedst/CsvQuery) was the inspiration for converting [datasetmultitool](https://github.com/BdR76/datasetmultitool) to a Notepad++ plug-in
-* [DonHo](https://github.com/donho) for creating Notepad++ and everyone at the [Notepad++ Community forum](https://community.notepad-plus-plus.org/topic/21124/c-adding-a-custom-styler-or-lexer-in-c-for-scintilla-notepad?_=1669066219457) for providing feedback
-* Anyone who shared their [plug-in on GitHub](https://github.com/search?l=C%23&q=notepad%2B%2B+plugin&type=Repositories)
-
-The CSV Lint plug-in couldn't have been created without their source examples, suggestions and valuable feedback.
-For a similar plug-in for Visual Studio Code check out [Rainbow CSV](https://github.com/mechatroner/vscode_rainbow_csv).
-
-Disclaimer
-----------
-This software is free-to-use and it is provided as-is without warranty of any kind.  
-Always back-up your data files to prevent data loss.  
-All [test files](../../tree/master/testdata/), examples and screenshots provided in this github repository contain fictitious and 
-[randomly generated](https://github.com/BdR76/RandomValuesNPP) data,
-any resemblance to real-life cases is the result of chance.
-
-BdR©2019-2025 Free to use - send questions or comments: Bas de Reuver - bdr1976@gmail.com
